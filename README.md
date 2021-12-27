@@ -1,6 +1,5 @@
-# PomodoroWithNestHub
-Automation Pomodoro based on your timetable with Google smart device using pychromecast
-
+# Pomodoro (on Nest Hub or Nest mini)
+Automated time management system based on your timetable with Google Smart Device using `pychromecast`
 
 ## Quick start
 
@@ -30,3 +29,8 @@ print(mc.status)
 
 cast.quit_app()
 ```
+
+## TODO
+- [ ] Timetable project - previous python icalendar
+- [ ] Notification project - based on github resource 
+- [ ] Merge projects - done ✅ 
