@@ -31,6 +31,6 @@ cast.quit_app()
 ```
 
 ## TODO
-- [ ] Timetable project - previous python icalendar
+- [x] Timetable project - previous python icalendar
 - [ ] Notification project - based on github resource 
 - [ ] Merge projects - done ✅ 
