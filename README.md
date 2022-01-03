@@ -40,7 +40,8 @@ mc.play_media(url,'video/mp4')
 mc.block_until_active()
 print(mc.status)
 
-# quit app
+# quit app about 20 sec
+time.sleep(20)
 cast.quit_app()
 ```
 
