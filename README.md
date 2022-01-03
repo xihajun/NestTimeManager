@@ -38,6 +38,7 @@ cast.quit_app()
 
 ## TODO
 - [x] Timetable project - previous python icalendar
+- [ ] customise your timetable use previous project
 - [ ] monitor your mac project - based on github resource 
 - [ ] Merge projects - done ✅ 
 
