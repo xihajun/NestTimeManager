@@ -11,6 +11,9 @@ Key points:
 
 
 ## Quick start
+```
+python code/run.py
+```
 
 If you have your Google Nest Hub in your room with the same wifi network, let's try this see if it works.
 ```{python}
@@ -25,7 +28,7 @@ url = 'https://api.oick.cn/txt/apiz.php?text=省去我开始要提醒你了，�
 # Discover and connect to chromecasts named Living Room
 chromecasts, browser = pychromecast.get_listed_chromecasts(friendly_names=["Bedroom display"])
 cast = chromecasts[0]
-
+cast.wait()
 # play media with message embedding
 mc = cast.media_controller
 mc.play_media(url,'video/mp4')
