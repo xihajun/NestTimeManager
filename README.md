@@ -15,6 +15,7 @@ Key points:
 python code/run.py
 ```
 
+## Test Nest Hub
 If you have your Google Nest Hub in your room with the same wifi network, let's try this see if it works.
 ```{python}
 import time
