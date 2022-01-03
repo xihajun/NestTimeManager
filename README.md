@@ -1,17 +1,29 @@
-# Pomodoro (on Nest Hub or Nest mini)
+# Pomodoro Reminder (on Nest Hub or Nest mini)
 Automated time management system based on your timetable with Google Smart Device using `pychromecast`
+
+## How it works
+![image](https://user-images.githubusercontent.com/25631641/147934109-d0a93cff-0112-4009-92fd-f4bba1a9f6d8.png)
 
 ## Quick start
 
 If you have your Google Nest Hub in your room with the same wifi network, let's try this see if it works.
-```
+```{python}
 import time
 import pychromecast
 
-# List chromecasts on the network, but don't connect
-services, browser = pychromecast.discovery.discover_chromecasts()
-# Shut down discovery
-pychromecast.discovery.stop_discovery(browser)
+
+# icalevents package: https://github.com/jazzband/icalevents ----
+from icalevents.icalevents import events
+
+# add your webcal url - icalendar 
+es  = events("webcal://p50-caldav.icloud.com/published/2/token", fix_apple=True)
+# google calendar 
+# es  = events(<Google Calendar URL>)
+# the first event
+print(es[0].summary)
+
+# "省去" is to skip first two words (buggy) + first evenet
+url = 'https://api.oick.cn/txt/apiz.php?text=省去我开始要提醒你了，滴滴滴，' + es[0].summary + '&spd=1'
 
 # Discover and connect to chromecasts named Living Room
 chromecasts, browser = pychromecast.get_listed_chromecasts(friendly_names=["Bedroom display"])
@@ -22,17 +34,19 @@ cast.wait()
 
 print(cast.status)
 
+# play media
 mc = cast.media_controller
-mc.play_media('http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4', 'video/mp4')
+mc.play_media(url,'video/mp4')
 mc.block_until_active()
 print(mc.status)
 
+# quit app
 cast.quit_app()
 ```
 
 ## TODO
 - [x] Timetable project - previous python icalendar
-- [ ] Notification project - based on github resource 
+- [ ] monitor your mac project - based on github resource 
 - [ ] Merge projects - done ✅ 
 
 
