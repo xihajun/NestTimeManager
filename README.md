@@ -2,7 +2,7 @@
 Automated time management system based on your timetable with Google Smart Device using `pychromecast`
 
 ## How it works
-![image](https://user-images.githubusercontent.com/25631641/147934109-d0a93cff-0112-4009-92fd-f4bba1a9f6d8.png)
+![image](https://user-images.githubusercontent.com/25631641/147935578-f27934a1-b945-46f8-b93a-9944f2bc2dfa.png)
 
 Key points:
 - icalevents (load calendar: share the link)
