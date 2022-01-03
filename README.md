@@ -4,6 +4,12 @@ Automated time management system based on your timetable with Google Smart Devic
 ## How it works
 ![image](https://user-images.githubusercontent.com/25631641/147934109-d0a93cff-0112-4009-92fd-f4bba1a9f6d8.png)
 
+Key points:
+- icalevents (load calendar: share the link)
+- MP3 API: https://api.oick.cn/txt/apiz.php?text=xxxx&spd=1
+- pychromecast: `mc.play_media(url,'video/mp4')`
+
+
 ## Quick start
 
 If you have your Google Nest Hub in your room with the same wifi network, let's try this see if it works.
