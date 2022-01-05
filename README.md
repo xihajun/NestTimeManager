@@ -2,6 +2,8 @@
 Automated time management system based on your timetable with Google Smart Device using `pychromecast`
 
 ## How it works
+https://user-images.githubusercontent.com/25631641/148216290-4e7b36b1-9056-4596-bb64-1de3224917ca.mov
+
 ![image](https://user-images.githubusercontent.com/25631641/147935578-f27934a1-b945-46f8-b93a-9944f2bc2dfa.png)
 
 Key points:
