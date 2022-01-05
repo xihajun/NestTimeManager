@@ -24,7 +24,6 @@ If you have your Google Nest Hub in your room with the same wifi network, let's 
 import time
 import pychromecast
 
-# import calevents 
 from icalevents.icalevents import events
 es  = events("webcal://p50-caldav.icloud.com/published/2/token", fix_apple=True)
 url = 'https://api.oick.cn/txt/apiz.php?text=省去我开始要提醒你了，滴滴滴，' + es[0].summary + '&spd=1'
@@ -45,8 +44,8 @@ cast.quit_app()
 
 ## TODO
 - [x] Timetable project - previous python icalendar
-- [ ] customise your timetable use previous project
-- [ ] monitor your mac project - based on github resource 
+- [ ] customise your timetable using previous project
+- [ ] monite your mac project - based on github resource 
 - [ ] Merge projects - done ✅ 
 
 
