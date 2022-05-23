@@ -9,7 +9,8 @@ https://user-images.githubusercontent.com/25631641/148216290-4e7b36b1-9056-4596-
 
 Key points:
 - icalevents (load calendar: share the link)
-- MP3 API: https://api.oick.cn/txt/apiz.php?text=xxxx&spd=1
+- ~~MP3 API: https://api.oick.cn/txt/apiz.php?text=xxxx&spd=1~~
+- MP3 API: https://tts.youdao.com/fanyivoice?word=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%98%AF%E4%BD%A0%E5%A5%BD&le=zh&keyfrom=speaker-target
 - pychromecast: `mc.play_media(url,'video/mp4')`
 
 
@@ -27,7 +28,7 @@ import pychromecast
 from icalevents.icalevents import events
 es  = events("webcal://p50-caldav.icloud.com/published/2/token", fix_apple=True)
 url = 'https://api.oick.cn/txt/apiz.php?text=省去我开始要提醒你了，滴滴滴，' + es[0].summary + '&spd=1'
-
+url = 'https://tts.youdao.com/fanyivoice?word=我开始要提醒你了，滴滴滴，' + es[0].summary + '&le=zh&keyfrom=speaker-target'
 # Discover and connect to chromecasts named Living Room
 # use pychromecast.get_chromecasts() to check the name
 chromecasts, browser = pychromecast.get_listed_chromecasts(friendly_names=["Bedroom display"])
@@ -51,3 +52,7 @@ cast.quit_app()
 
 
 
+## MP3 API
+- https://fanyi.sogou.com/reventondc/synthesis?text=%E4%BD%A0%E5%A5%BD%E5%95%8A&speed=1&lang=zh-CHS&from=translateweb&speaker=6
+- http://tts.youdao.com/fanyivoice?word=你好，我是你好&le=zh&keyfrom=speaker-target
+- 
