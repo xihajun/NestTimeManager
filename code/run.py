@@ -28,7 +28,8 @@ while True:
         if gap <= 600 and gap > 0:
             startnotif = True
             message = i.summary
-            url = 'https://api.oick.cn/txt/apiz.php?text=省去我开始要提醒你了，滴滴滴，去' + message + '&spd=1'
+            url = 'https://tts.youdao.com/fanyivoice?word=我开始要提醒你了，滴滴滴，去'+ message + '&le=zh&keyfrom=speaker-target'
+#             url = 'https://api.oick.cn/txt/apiz.php?text=省去我开始要提醒你了，滴滴滴，去' + message + '&spd=1'
             break
         else:
             startnotif = False
@@ -39,7 +40,8 @@ while True:
         if gap <= 600 and gap > 0:
             endnotif = True
             message = i.summary
-            url = 'https://api.oick.cn/txt/apiz.php?text=省去快去休息了，休息身体最重要滴滴滴滴滴&spd=1'
+            url = 'https://tts.youdao.com/fanyivoice?word=快去休息了，休息身体最重要滴滴滴滴滴&le=zh&keyfrom=speaker-target'
+            #url = 'https://api.oick.cn/txt/apiz.php?text=省去快去休息了，休息身体最重要滴滴滴滴滴&spd=1'
             break
         else:
             endnotif = False
@@ -48,11 +50,12 @@ while True:
     print("end:",endnotif)
     
     if startnotif or endnotif:
-        chromecasts, browser = pychromecast.get_listed_chromecasts(friendly_names=["Bedroom display"])
+        chromecasts, browser = pychromecast.get_listed_chromecasts(friendly_names=["Bedroom speaker"])
         cast = chromecasts[0]
         cast.wait()
         mc = cast.media_controller
-        mc.play_media(url,'video/mp4')
+        # display mc.play_media(url,'video/mp4')
+        mc.play_media(url,'music/mp3')
         mc.block_until_active()
         sleep(20)
         cast.quit_app()
