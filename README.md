@@ -29,6 +29,7 @@ es  = events("webcal://p50-caldav.icloud.com/published/2/token", fix_apple=True)
 url = 'https://api.oick.cn/txt/apiz.php?text=省去我开始要提醒你了，滴滴滴，' + es[0].summary + '&spd=1'
 
 # Discover and connect to chromecasts named Living Room
+# use pychromecast.get_chromecasts() to check the name
 chromecasts, browser = pychromecast.get_listed_chromecasts(friendly_names=["Bedroom display"])
 cast = chromecasts[0]
 cast.wait()
